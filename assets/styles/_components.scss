@@ -154,10 +154,6 @@
     background-color: #ff77b8;
     border-color: #ff77b8;
   }
-
-  & + .btns{
-    margin-left: 7px;
-  }
 }
 
 // Forms
@@ -165,6 +161,7 @@
 .forms-group{
   position: relative;
   display: flex;
+  flex-wrap: wrap;
 
   & + .forms-group{
     margin-top: 10px;
@@ -176,6 +173,12 @@
   }
 }
 
+.error{
+  color: #e0006c;
+  font-size: 12px;
+  font-family: $fontLight;
+}
+
 .forms-control{
   width: 100%;
   background-color: transparent;
@@ -184,6 +187,10 @@
   color: $colorText;
   font-family: $fontLight;
   font-size: 12px;
+
+  &.invalid{
+    border-color: #e0006c;
+  }
 }
 textarea.forms-control{
   min-height: 140px;

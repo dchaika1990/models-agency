@@ -34,7 +34,7 @@
     background-color: #0d0d0d;
   }
   &__bottom{
-    height: 80px;
+    min-height: 80px;
     background: linear-gradient(to right, #fd61e3 0%, #ff77b8 100%);
   }
   &__logo{
@@ -105,6 +105,7 @@
   &__breadcrumb{
     ul{
       display: flex;
+      flex-wrap: wrap;
 
       li{
         min-width: 80px;
@@ -116,25 +117,23 @@
         position: relative;
         transition: all .3s linear;
 
-        & + li{
-          margin-left: 30px;
+        &:not(:last-child){
+          background-color: #fff;
+          color: #1a1a1a;
+
+          margin-right: 30px;
 
           &::before{
             content: '';
             position: absolute;
             top: 50%;
-            left: -18px;
+            right: -21px;
             display: inline-block;
             width: 10px;
             height: 10px;
             transform: translateY(-50%);
             background: url("../img/icons/arrow-right.png") no-repeat center / contain;
           }
-        }
-
-        &:not(:last-child){
-          background-color: #fff;
-          color: #1a1a1a;
 
           &:hover{
             cursor: pointer;
@@ -164,7 +163,7 @@
         }
 
         & + li{
-          border-left: 1px solid #ff81c2;
+          border-left: 1px solid rgba(255,255,255,.2);
         }
 
         &:last-child{
@@ -210,8 +209,17 @@
   &_tabs{
     &__header{
       margin-bottom: 40px;
+      margin-top: -10px;
+      display: flex;
+      flex-wrap: wrap;
+      .btns{
+        margin-right: 7px;
+        margin-top: 10px;
+      }
     }
     &__body{
+      display: flex;
+      flex-wrap: wrap;
       a{
         display: inline-block;
         height: 120px;
@@ -224,10 +232,14 @@
   &_forms{
     &__body{
       padding-top: 6px;
+      .btns{
+        margin-right: 7px;
+      }
     }
   }
 
   &_model{
+    margin-bottom: 50px;
     &__photo{
       display: flex;
       img{
