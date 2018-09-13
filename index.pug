@@ -25,98 +25,100 @@
     {src: './assets/img/temp/14.jpg', data: 'snaps', order:14},
     {src: './assets/img/temp/15.jpg', data: 'snaps', order:15}
     ]
-include assets/include/head
-body
-    include assets/include/header
-    +header(['home','models','model'])
+doctype html
+html(lang='en')
+    include assets/include/head
+    body
+        include assets/include/header
+        +header(['home','models','model'])
 
-    .wrapper
-        .container
-            .row.d-flex.flex-column-reverse.flex-lg-row
-                .col-md-12.col-lg-7
-                    .section.section-text
-                        .section__title
-                            span About Model
-                        .section_text__content
-                            p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod  ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                            p At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem  ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
-                    .section.section_tabs#mixit
-                        .section_tabs__header
-                            button(type='button' data-filter='all').btns all
+        .wrapper
+            .container
+                .row.d-flex.flex-column-reverse.flex-lg-row
+                    .col-md-12.col-lg-7
+                        .section.section-text
+                            .section__title
+                                span About Model
+                            .section_text__content
+                                p At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod  ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                p At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem  ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+                        .section.section_tabs#mixit
+                            .section_tabs__header
+                                button(type='button' data-filter='all').btns all
 
-                            button(type='button' data-filter='.tests').btns tests
+                                button(type='button' data-filter='.tests').btns tests
 
-                            button(type='button' data-filter='.editorials').btns editorials
+                                button(type='button' data-filter='.editorials').btns editorials
 
-                            button(type='button' data-filter='.snaps').btns snaps
-                        .section_tabs__body
-                            each elem in imgArr
-                                a(href=elem.src class=elem.data data-myorder=elem.order).mix
-                                    img(src=elem.src )
-                    .section.section_forms
-                        .section__title
-                            span contact Model
-                        .section_forms__body
-                            form(novalidate)
-                                .forms-group
-                                    .span.icon.user-outline-gray
-                                    input(type='text' name='userName' class='forms-control' required)
-                                .forms-group
-                                    .span.icon.contact-gray
-                                    input(type='email' name='userEmail' class='forms-control' required)
-                                .forms-group
-                                    .span.icon.smartphone-gray
-                                    input(type='tel' name='userTel' class='forms-control' required)
-                                .forms-group
-                                    .span.icon.edit-grey
-                                    textarea(class='forms-control' required name='userMessage' )
-                                .forms-group
-                                    button(type='submit').btns.primary send
-                                    button(type='reset').btns clear
+                                button(type='button' data-filter='.snaps').btns snaps
+                            .section_tabs__body
+                                each elem in imgArr
+                                    a(href=elem.src class=elem.data data-myorder=elem.order).mix
+                                        img(src=elem.src alt='model photo')
+                        .section.section_forms
+                            .section__title
+                                span contact Model
+                            .section_forms__body
+                                form(novalidate)
+                                    .forms-group
+                                        .span.icon.user-outline-gray
+                                        input(type='text' name='userName' class='forms-control' required)
+                                    .forms-group
+                                        .span.icon.contact-gray
+                                        input(type='email' name='userEmail' class='forms-control' required)
+                                    .forms-group
+                                        .span.icon.smartphone-gray
+                                        input(type='tel' name='userTel' class='forms-control' required)
+                                    .forms-group
+                                        .span.icon.edit-grey
+                                        textarea(class='forms-control' required name='userMessage' )
+                                    .forms-group
+                                        button(type='submit').btns.primary send
+                                        button(type='reset').btns clear
 
-                .col-md-8.col-lg-5
-                    .section_model
-                        .section_model__photo
-                            img(src='assets/img/temp/model.jpg')
-                        .section_model__name
-                            span Whitney Seether
-                        .section_model__soc.soc-btn
-                            ul
-                                li.fb
-                                    a(href='javascript:void(0)').icon.facebook
-                                li.tw
-                                    a(href='javascript:void(0)').icon.twitter
-                                li.g
-                                    a(href='javascript:void(0)').icon.google
-                                li.in
-                                    a(href='javascript:void(0)').icon.linkedin
-                                li.p
-                                    a(href='javascript:void(0)').icon.pinterest
-                        .section_model__data
-                            ul
-                                each key in dataArr
+                    .col-md-8.col-lg-5
+                        .section_model
+                            .section_model__photo
+                                img(src='assets/img/temp/model.jpg' alt='model photo')
+                            .section_model__name
+                                span Whitney Seether
+                            .section_model__soc.soc-btn
+                                ul
+                                    li.fb
+                                        a(href='javascript:void(0)').icon.facebook
+                                    li.tw
+                                        a(href='javascript:void(0)').icon.twitter
+                                    li.g
+                                        a(href='javascript:void(0)').icon.google
+                                    li.in
+                                        a(href='javascript:void(0)').icon.linkedin
+                                    li.p
+                                        a(href='javascript:void(0)').icon.pinterest
+                            .section_model__data
+                                ul
+                                    each key in dataArr
+                                        li
+                                            span.title= key.title
+                                            span= key.result
+                            .section_model__adress
+                                ul
                                     li
-                                        span.title= key.title
-                                        span= key.result
-                        .section_model__adress
-                            ul
-                                li
-                                    p
-                                        span.icon.maps
-                                        |
-                                        span address:
-                                    p Jackson’s Street 567, San Diego, California, United States
-                                li
-                                    p
-                                        span.icon.phone
-                                        |
-                                        span phone:
-                                    p 8 (800) 456-2698
-                                li
-                                    p
-                                        span.icon.contact
-                                        |
-                                        span email:
-                                    p.email agency@support.com
+                                        p
+                                            span.icon.maps
+                                            |
+                                            span address:
+                                        p Jackson’s Street 567, San Diego, California, United States
+                                    li
+                                        p
+                                            span.icon.phone
+                                            |
+                                            span phone:
+                                        p 8 (800) 456-2698
+                                    li
+                                        p
+                                            span.icon.contact
+                                            |
+                                            span email:
+                                        p.email agency@support.com
 
-    include assets/include/footer
+        include assets/include/footer
