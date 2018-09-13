@@ -663,4 +663,8 @@ textarea.forms-control {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center; } }
+            justify-content: center; }
+  .footer__bottom {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center; } }
