@@ -8,40 +8,60 @@
   height: 16px;
 
   &.contact{
-    background: url("../img/icons/contact.png") no-repeat center;
+    background: url("../img/icons/contact.png") no-repeat center / contain;
   }
   &.facebook{
-    background: url("../img/icons/facebook.png") no-repeat center;
+    background: url("../img/icons/facebook.png") no-repeat center / contain;
   }
   &.google{
-    background: url("../img/icons/google-logo.png") no-repeat center;
+    background: url("../img/icons/google-logo.png") no-repeat center / contain;
   }
   &.linkedin{
-    background: url("../img/icons/linkedin-letters.png") no-repeat center;
+    background: url("../img/icons/linkedin-letters.png") no-repeat center / contain;
   }
   &.logo{
-    background: url("../img/temp/logo.png") no-repeat center;
+    background: url("../img/temp/logo.png") no-repeat center / contain;
   }
   &.maps{
-    background: url("../img/icons/maps-and-flags.png") no-repeat center;
+    background: url("../img/icons/maps-and-flags.png") no-repeat center / contain;
   }
   &.pinterest{
-    background: url("../img/icons/pinterest-logo.png") no-repeat center;
+    background: url("../img/icons/pinterest-logo.png") no-repeat center / contain;
   }
   &.search{
-    background: url("../img/icons/search.png") no-repeat center;
+    background: url("../img/icons/search.png") no-repeat center / contain;
   }
   &.bag{
-    background: url("../img/icons/shopping-basket.png") no-repeat center;
+    background: url("../img/icons/shopping-basket.png") no-repeat center / contain;
   }
   &.phone{
-    background: url("../img/icons/smartphone.png") no-repeat center;
+    background: url("../img/icons/smartphone.png") no-repeat center / contain;
   }
   &.twitter{
-    background: url("../img/icons/twitter.png") no-repeat center;
+    background: url("../img/icons/twitter.png") no-repeat center / contain;
   }
   &.user{
-    background: url("../img/icons/user-outline.png") no-repeat center;
+    background: url("../img/icons/user-outline.png") no-repeat center / contain;
+  }
+  &.edit-grey{
+    background: url("../img/icons/edit-gray.png") no-repeat center / contain;
+  }
+  &.smartphone-gray{
+    background: url("../img/icons/smartphone-gray.png") no-repeat center / contain;
+  }
+  &.contact-gray{
+    background: url("../img/icons/contact-gray.png") no-repeat center / contain;
+  }
+  &.user-outline-gray{
+    background: url("../img/icons/user-outline-gray.png") no-repeat center / contain;
+  }
+  &.heart{
+    background: url("../img/icons/heart.png") no-repeat center / contain;
+  }
+  &.copyright{
+    width: 10px;
+    height: 10px;
+    background: url("../img/icons/copyright.png") no-repeat center / contain;
   }
 }
 
@@ -108,7 +128,7 @@
 
 // Btns
 
-.btn{
+.btns{
   min-width: 120px;
   border: 1px solid #fff;
   background-color: transparent;
@@ -116,9 +136,10 @@
   font-family: $fontBlack;
   text-transform: uppercase;
   text-align: center;
-  padding: 11px 10px;
+  padding: 7px 10px;
   cursor: pointer;
   transition: all .3s ease-in-out;
+  font-size: 12px;
 
   &:hover,
   &.mixitup-control-active,
@@ -128,9 +149,44 @@
     transition: all .3s ease-in-out;
   }
 
-  & + .btn{
-    margin-left: 8px;
+  &.mixitup-control-active:hover,
+  &.primary:hover{
+    background-color: #ff77b8;
+    border-color: #ff77b8;
   }
+
+  & + .btns{
+    margin-left: 7px;
+  }
+}
+
+// Forms
+
+.forms-group{
+  position: relative;
+  display: flex;
+
+  & + .forms-group{
+    margin-top: 10px;
+  }
+  .icon{
+    position: absolute;
+    top: 13px;
+    left: 20px;
+  }
+}
+
+.forms-control{
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #313131;
+  padding: 7px 20px 7px 50px;
+  color: $colorText;
+  font-family: $fontLight;
+  font-size: 12px;
+}
+textarea.forms-control{
+  min-height: 140px;
 }
 
 /* COMPONENTS END */

@@ -24,10 +24,11 @@ ul, ol{
 a{
   color: inherit;
   text-decoration: none;
-  transition: color .3s linear;
+  transition: all .3s linear;
 
   &:hover{
     color: #818181;
+    text-decoration: none;
   }
 }
 img{
@@ -36,11 +37,11 @@ img{
 input,
 textarea,
 button{
-  outline: none;
+  outline: none!important;
   border: none;
 }
 textarea{
-  resize: vertical;
+  resize: none;
 }
 button{
   cursor: pointer;

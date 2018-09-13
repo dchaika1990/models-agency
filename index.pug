@@ -32,8 +32,8 @@ body
 
     .wrapper
         .container
-            .row
-                .col-sm-12.col-md-7
+            .row.d-flex.flex-column-reverse.flex-lg-row
+                .col-md-12.col-lg-7
                     .section.section-text
                         .section__title
                             span About Model
@@ -42,21 +42,39 @@ body
                             p At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem  ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
                     .section.section_tabs#mixit
                         .section_tabs__header
-                            button(type='button' data-filter='all').btn all
+                            button(type='button' data-filter='all').btns all
 
-                            button(type='button' data-filter='.tests').btn tests
+                            button(type='button' data-filter='.tests').btns tests
 
-                            button(type='button' data-filter='.editorials').btn editorials
+                            button(type='button' data-filter='.editorials').btns editorials
 
-                            button(type='button' data-filter='.snaps').btn snaps
+                            button(type='button' data-filter='.snaps').btns snaps
                         .section_tabs__body
                             each elem in imgArr
-                                a(href='javascript:void(0)' class=elem.data data-myorder=elem.order).mix
+                                a(href=elem.src class=elem.data data-myorder=elem.order).mix
                                     img(src=elem.src )
                     .section.section_forms
-                        form(novalidate)
+                        .section__title
+                            span contact Model
+                        .section_forms__body
+                            form(novalidate)
+                                .forms-group
+                                    .span.icon.user-outline-gray
+                                    input(type='text' name='userName' class='forms-control' required)
+                                .forms-group
+                                    .span.icon.contact-gray
+                                    input(type='email' name='userEmail' class='forms-control' required)
+                                .forms-group
+                                    .span.icon.smartphone-gray
+                                    input(type='tel' name='userTel' class='forms-control' required)
+                                .forms-group
+                                    .span.icon.edit-grey
+                                    textarea(class='forms-control' required name='userMessage')
+                                .forms-group
+                                    button(type='submit').btns.primary send
+                                    button(type='reset').btns clear
 
-                .col-sm-12.col-md-5
+                .col-md-8.col-lg-5
                     .section-model
                         .section_model__photo
                             img(src='assets/img/temp/model.jpg')
@@ -100,3 +118,5 @@ body
                                         |
                                         span email:
                                     p.email agency@support.com
+
+    include assets/include/footer

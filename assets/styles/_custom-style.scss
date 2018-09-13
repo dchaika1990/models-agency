@@ -114,6 +114,7 @@
         line-height: 20px;
         padding: 0 5px;
         position: relative;
+        transition: all .3s linear;
 
         & + li{
           margin-left: 30px;
@@ -139,6 +140,7 @@
             cursor: pointer;
             color: #fff;
             background-color: #1a1a1a;
+            transition: all .3s linear;
           }
         }
         &:last-child{
@@ -163,6 +165,10 @@
 
         & + li{
           border-left: 1px solid #ff81c2;
+        }
+
+        &:last-child{
+          padding-right: 0;
         }
 
         &:hover{
@@ -215,19 +221,26 @@
     }
   }
 
+  &_forms{
+    &__body{
+      padding-top: 6px;
+    }
+  }
+
   &_model{
     &__photo{
       display: flex;
       img{
         height: 100%;
+        width: 100%;
       }
     }
     &__name{
-      line-height: 33px;
+      line-height: 60px;
       color: #fff;
       font-size: 50px;
       font-weight: 100;
-      padding: 40px 40px 35px 40px;
+      padding: 30px 40px 17px 40px;
       font-family: $fontThin;
       background-color: #0d0d0d;
     }
@@ -296,5 +309,33 @@
 }
 
 // WRAPPER END
+
+// FOOTER START
+.footer{
+  margin-top: 26px;
+  &__top{
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &__bottom{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    color: #818181;
+    font-size: 14px;
+
+    .black{
+      color: #000;
+    }
+  }
+}
+// FOOTER END
 
 /* CUSTOM STYLES END */

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Models Agency</title>
     <!-- Bootstrap-->
-    <link rel="stylesheet" href="./assets/styles/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/styles/bootstrap/bootstrap.min.css">
+    <!-- magnific-popup-->
+    <link rel="stylesheet" href="./assets/styles/magnific-popup/magnific-popup.css">
     <!-- Styles-->
     <link rel="stylesheet" href="./assets/styles/style.css">
     <!-- jQuery-->
@@ -14,7 +16,7 @@
     <!-- mixitUp-->
     <script src="./assets/js/mixitUp/mixitup.min.js"></script>
     <!-- magnific-popup-->
-    <script src="./assets/js/magnific-popup/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Script-->
     <script src="./assets/js/init.js"></script>
   </head>
@@ -58,8 +60,8 @@
     </header>
   <div class="wrapper">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-7">
+      <div class="row d-flex flex-column-reverse flex-lg-row">
+        <div class="col-md-12 col-lg-7">
           <div class="section section-text">
             <div class="section__title"><span>About Model</span></div>
             <div class="section_text__content">
@@ -69,19 +71,43 @@
           </div>
           <div class="section section_tabs" id="mixit">
             <div class="section_tabs__header">
-              <button class="btn" type="button" data-filter="all">all</button>
-              <button class="btn" type="button" data-filter=".tests">tests</button>
-              <button class="btn" type="button" data-filter=".editorials">editorials</button>
-              <button class="btn" type="button" data-filter=".snaps">snaps</button>
+              <button class="btns" type="button" data-filter="all">all</button>
+              <button class="btns" type="button" data-filter=".tests">tests</button>
+              <button class="btns" type="button" data-filter=".editorials">editorials</button>
+              <button class="btns" type="button" data-filter=".snaps">snaps</button>
             </div>
-            <div class="section_tabs__body"><a class="editorials mix" href="javascript:void(0)" data-myorder="1"><img src="./assets/img/temp/1.jpg"></a><a class="editorials mix" href="javascript:void(0)" data-myorder="2"><img src="./assets/img/temp/2.jpg"></a><a class="editorials mix" href="javascript:void(0)" data-myorder="3"><img src="./assets/img/temp/3.jpg"></a><a class="editorials mix" href="javascript:void(0)" data-myorder="4"><img src="./assets/img/temp/4.jpg"></a><a class="tests mix" href="javascript:void(0)" data-myorder="5"><img src="./assets/img/temp/5.jpg"></a><a class="tests mix" href="javascript:void(0)" data-myorder="6"><img src="./assets/img/temp/6.jpg"></a><a class="tests mix" href="javascript:void(0)" data-myorder="7"><img src="./assets/img/temp/7.jpg"></a><a class="tests mix" href="javascript:void(0)" data-myorder="8"><img src="./assets/img/temp/8.jpg"></a><a class="expected mix" href="javascript:void(0)" data-myorder="9"><img src="./assets/img/temp/9.jpg"></a><a class="expected mix" href="javascript:void(0)" data-myorder="10"><img src="./assets/img/temp/10.jpg"></a><a class="expected mix" href="javascript:void(0)" data-myorder="11"><img src="./assets/img/temp/11.jpg"></a><a class="expected mix" href="javascript:void(0)" data-myorder="12"><img src="./assets/img/temp/12.jpg"></a><a class="snaps mix" href="javascript:void(0)" data-myorder="13"><img src="./assets/img/temp/13.jpg"></a><a class="snaps mix" href="javascript:void(0)" data-myorder="14"><img src="./assets/img/temp/14.jpg"></a><a class="snaps mix" href="javascript:void(0)" data-myorder="15"><img src="./assets/img/temp/15.jpg"></a>
+            <div class="section_tabs__body"><a class="editorials mix" href="./assets/img/temp/1.jpg" data-myorder="1"><img src="./assets/img/temp/1.jpg"></a><a class="editorials mix" href="./assets/img/temp/2.jpg" data-myorder="2"><img src="./assets/img/temp/2.jpg"></a><a class="editorials mix" href="./assets/img/temp/3.jpg" data-myorder="3"><img src="./assets/img/temp/3.jpg"></a><a class="editorials mix" href="./assets/img/temp/4.jpg" data-myorder="4"><img src="./assets/img/temp/4.jpg"></a><a class="tests mix" href="./assets/img/temp/5.jpg" data-myorder="5"><img src="./assets/img/temp/5.jpg"></a><a class="tests mix" href="./assets/img/temp/6.jpg" data-myorder="6"><img src="./assets/img/temp/6.jpg"></a><a class="tests mix" href="./assets/img/temp/7.jpg" data-myorder="7"><img src="./assets/img/temp/7.jpg"></a><a class="tests mix" href="./assets/img/temp/8.jpg" data-myorder="8"><img src="./assets/img/temp/8.jpg"></a><a class="expected mix" href="./assets/img/temp/9.jpg" data-myorder="9"><img src="./assets/img/temp/9.jpg"></a><a class="expected mix" href="./assets/img/temp/10.jpg" data-myorder="10"><img src="./assets/img/temp/10.jpg"></a><a class="expected mix" href="./assets/img/temp/11.jpg" data-myorder="11"><img src="./assets/img/temp/11.jpg"></a><a class="expected mix" href="./assets/img/temp/12.jpg" data-myorder="12"><img src="./assets/img/temp/12.jpg"></a><a class="snaps mix" href="./assets/img/temp/13.jpg" data-myorder="13"><img src="./assets/img/temp/13.jpg"></a><a class="snaps mix" href="./assets/img/temp/14.jpg" data-myorder="14"><img src="./assets/img/temp/14.jpg"></a><a class="snaps mix" href="./assets/img/temp/15.jpg" data-myorder="15"><img src="./assets/img/temp/15.jpg"></a>
             </div>
           </div>
           <div class="section section_forms">
-            <form novalidate></form>
+            <div class="section__title"><span>contact Model</span></div>
+            <div class="section_forms__body">
+              <form novalidate>
+                <div class="forms-group">
+                  <div class="span icon user-outline-gray"></div>
+                  <input class="forms-control" type="text" name="userName" required>
+                </div>
+                <div class="forms-group">
+                  <div class="span icon contact-gray"></div>
+                  <input class="forms-control" type="email" name="userEmail" required>
+                </div>
+                <div class="forms-group">
+                  <div class="span icon smartphone-gray"></div>
+                  <input class="forms-control" type="tel" name="userTel" required>
+                </div>
+                <div class="forms-group">
+                  <div class="span icon edit-grey"></div>
+                  <textarea class="forms-control" required name="userMessage"></textarea>
+                </div>
+                <div class="forms-group">
+                  <button class="btns primary" type="submit">send</button>
+                  <button class="btns" type="reset">clear</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 col-md-5">
+        <div class="col-md-8 col-lg-5">
           <div class="section-model">
             <div class="section_model__photo"><img src="assets/img/temp/model.jpg"></div>
             <div class="section_model__name"><span>Whitney Seether</span></div>
@@ -125,4 +151,18 @@
       </div>
     </div>
   </div>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="soc-btn">
+        <ul>
+          <li class="fb"><a class="icon facebook" href="javascript:void(0)"></a></li>
+          <li class="tw"><a class="icon twitter" href="javascript:void(0)"></a></li>
+          <li class="g"><a class="icon google" href="javascript:void(0)"></a></li>
+          <li class="in"><a class="icon linkedin" href="javascript:void(0)"></a></li>
+          <li class="p"><a class="icon pinterest" href="javascript:void(0)"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom"><span><span class=" icon copyright"></span> Agency 2015 | Created with <span class=" icon heart"></span> by <span class='black'>MW Templates</span></span></div>
+  </footer>
 </body>
