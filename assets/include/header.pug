@@ -1,0 +1,36 @@
+- var headerNav = ['home','pages','models','appointment','faq','content']
+mixin header(arr)
+    header.header
+        .header__top
+            .header__logo
+                a(href='javascript:void(0)')
+                    img(src='./assets/img/temp/logo.png')
+            nav.header__nav
+                ul
+                    each name in headerNav
+                        li
+                            a(href='javascript:void(0)')= name
+            .header__contacts
+                span.phone (800) 543 4625
+                span 24/7 free calls
+
+        .header__bottom
+            .header__email
+                span agency@support.com
+            nav.header__breadcrumb
+                ul
+                    each elem, index in arr
+                        li
+                            if index + 1 == arr.length
+                                span= elem
+                            else
+                                a(href="javascript:void(0)")= elem
+
+            .header__buttons
+                ul
+                    li
+                        span.icon.bag
+                    li
+                        span.icon.user
+                    li
+                        span.icon.search

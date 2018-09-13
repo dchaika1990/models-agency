@@ -4,13 +4,14 @@
   box-sizing: border-box;
 }
 body{
-  //margin: 0;
-  //color: $bodyColor;
-  //font-family: $bodyFontFamily;
-  //font-size: $bodyFontSize;
-  //line-height: $bodyLineHeight;
-  //font-weight: $bodyFontWeight;
-  //background-color: $bodyBkg;
+  max-width: 1920px;
+  margin: 0;
+  color: $colorText;
+  font-family: $fontLight;
+  font-size: $bodyFontSize;
+  line-height: $lineHeightText;
+  font-weight: 300;
+  background-color: #1a1a1a;
 }
 h1, h2, h3, h4, h5, h6, p{
   margin: 0;
@@ -26,7 +27,7 @@ a{
   transition: color .3s linear;
 
   &:hover{
-    //color: $orange;
+    color: #818181;
   }
 }
 img{

@@ -1,0 +1,136 @@
+/* COMPONENTS START */
+
+// Icons
+
+.icon{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  &.contact{
+    background: url("../img/icons/contact.png") no-repeat center;
+  }
+  &.facebook{
+    background: url("../img/icons/facebook.png") no-repeat center;
+  }
+  &.google{
+    background: url("../img/icons/google-logo.png") no-repeat center;
+  }
+  &.linkedin{
+    background: url("../img/icons/linkedin-letters.png") no-repeat center;
+  }
+  &.logo{
+    background: url("../img/temp/logo.png") no-repeat center;
+  }
+  &.maps{
+    background: url("../img/icons/maps-and-flags.png") no-repeat center;
+  }
+  &.pinterest{
+    background: url("../img/icons/pinterest-logo.png") no-repeat center;
+  }
+  &.search{
+    background: url("../img/icons/search.png") no-repeat center;
+  }
+  &.bag{
+    background: url("../img/icons/shopping-basket.png") no-repeat center;
+  }
+  &.phone{
+    background: url("../img/icons/smartphone.png") no-repeat center;
+  }
+  &.twitter{
+    background: url("../img/icons/twitter.png") no-repeat center;
+  }
+  &.user{
+    background: url("../img/icons/user-outline.png") no-repeat center;
+  }
+}
+
+// Soc btn
+
+.soc-btn{
+  ul{
+    display: flex;
+
+    li{
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      & + li{
+        margin-left: 10px;
+      }
+
+      &.fb{
+        background-color: #507cbe;
+
+        &:hover{
+          background-color: #578cd4;
+        }
+      }
+
+      &.tw{
+        background-color: #00abef;
+
+        &:hover{
+          background-color: #0088c2;
+        }
+      }
+
+      &.g{
+        background-color: #d93e2d;
+
+        &:hover{
+          background-color: #b43328;
+        }
+      }
+
+      &.in{
+        background-color: #3371b7;
+
+        &:hover{
+          background-color: #418ee4;
+        }
+      }
+
+      &.p{
+        background-color: #c92619;
+
+        &:hover{
+          background-color: #e82b1b;
+        }
+      }
+    }
+  }
+}
+
+// Btns
+
+.btn{
+  min-width: 120px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-family: $fontBlack;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 11px 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  &:hover,
+  &.mixitup-control-active,
+  &.primary{
+    background-color: #e0006c;
+    border-color: #e0006c;
+    transition: all .3s ease-in-out;
+  }
+
+  & + .btn{
+    margin-left: 8px;
+  }
+}
+
+/* COMPONENTS END */
