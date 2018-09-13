@@ -10,6 +10,16 @@ mixin header(arr)
                     each name in headerNav
                         li
                             a(href='javascript:void(0)')= name
+            nav.header__mobile-nav
+                .header__burger
+                    span
+                    span
+                    span
+                .header__mobile-list
+                    ul
+                        each name in headerNav
+                            li
+                                a(href='javascript:void(0)')= name
             .header__contacts
                 span.phone (800) 543 4625
                 span 24/7 free calls

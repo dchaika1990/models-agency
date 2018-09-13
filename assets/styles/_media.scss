@@ -37,10 +37,18 @@
       padding-top: 10px;
       padding-bottom: 10px;
     }
+    &__logo{
+      a{
+        height: 40px;
+      }
+    }
+    &__mobile-nav{
+      display: flex;
+    }
     &__contacts{
       font-size: 12px;
       span.phone{
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     &__nav{

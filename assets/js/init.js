@@ -18,5 +18,17 @@ $(document).ready(function () {
         }
     });
 
+    // Menu mobile
+
+    $('.header__burger').on('click', function () {
+        $(this).toggleClass('open');
+        $('body').toggleClass('overflow');
+        $('.header__mobile-list').toggleClass('active');
+    });
+
+    $('.header__mobile-list a').on('click', function () {
+        $('.header__burger').click();
+    });
+
 
 });
